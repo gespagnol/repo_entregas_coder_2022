@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;        
+}
+
+h2, h3 {
+    padding-bottom: 20px;    
+}
+
+#gridArea {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:     
+        "header__container"
+        "slider" 
+        "servicios"               
+        "footer__container";    
+    grid-template-rows: 10% 20% 48% 32%;    
+}
+
+header {        
+    grid-area: header__container; 
+    width: 100%;    
+}
+
+    header nav {      
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;  
+        padding: 1% 3% 1% 3%;  
+    }
+
+        header ul {    
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            flex-wrap: wrap;    
+        }
+
+            header li {
+                padding-left: 70px;                
+            }
+
+                header a {
+                    color:black;        
+                    text-decoration: none;	
+                }
+
+
+.slider__home {
+    grid-area: slider; 
+    background-image: url("../assets/hacker-you-greenpaper.jpeg"); 
+    background-size: cover;  
+    background-position: 10% 20%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 3% 3% 3%;    
+}
+
+.slider__team {
+    background-image: url("../assets/Team-backgroud.jpeg");    
+    background-position: 5rem 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4% 3% 3% 3%;
+}    
+
+.slider__slogan {        
+        font-size: 40px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+}    
+
+.slider__desc {        
+        font-size: 20px;
+        text-align: center;
+        color: #fff;        
+        padding: 2% 15% 2% 15%;
+        
+}       
+
+.slider__btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: Bold;	
+	border-style: solid;
+    border-width: 1px;
+    border-radius: 30px;
+    border-color: aqua;	
+    padding: 10px 20px;    
+
+    -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.servicios {
+    grid-area: servicios; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    justify-content: space-evenly;   
+    padding: 2% 3% 2% 3%;  
+}
+
+.servicios__col {
+    width: 400px;          
+}
+    .servicios__col img{    
+        border-radius: 8px; 
+        -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+    }
+
+        .servicios__desc {                
+            font-size: 16px;    
+            text-align: left; 
+            padding: 5% 0 5% 0;               
+        }  
+        
+            .servicios h3 {
+                text-align: center;
+                animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both; 
+            }
+
+.team {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    justify-content: space-between;
+    padding: 10px 50px;
+} 
+
+    .team__col {    
+        width: 300px;       
+    }
+
+        .team__desc {                
+            font-size: 18px;    
+            font-weight: bold;
+            text-align: center; 
+            padding: 5% 0 5% 0;       
+        } 
+
+.news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    justify-content: space-between;
+    padding: 10px 50px;
+} 
+
+    .news__col {    
+        width: 300px;    
+    }
+
+        .news__col img {
+            border-radius: 8px;
+            -webkit-animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;         
+        }
+
+        .news__col h3{
+            padding: 5% 0 5% 0; 
+            text-align: left;
+        }
+
+            .news__desc {                
+                font-size: 16px;     
+                text-align: left;     
+            } 
+
+.contacto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    justify-content: space-between;    
+    padding: 10px 50px;
+} 
+
+    .contacto__col {    
+        width: auto;   
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;  
+        justify-content: space-between;    
+        padding: 10px 0 50px 0; 
+    }
+
+    .contacto__col form {    
+        width: 400px;   
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;  
+        justify-content: space-between;    
+        padding: 10px 0 100px 0; 
+    }
+
+    .contacto__col input {          
+        padding: 10px 0 10px 0; 
+        margin: 5px 0 10px 0;
+    }
+
+    .form_button{
+        font-size: 15px;
+        width: 100px;   
+    }
+
+        .contacto__desc {                
+            font-size: 16px;     
+            text-align: left;     
+        } 
+
+.section_title {    
+    font-size: 18px;    
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer__container {
+
+    grid-area: footer__container;
+    background-image: url("../assets/abstract-data-on-black-background-scaled-1.jpg");       
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    justify-content: space-between;
+    padding: 70px 200px;      
+}
+
+    .footer__col {            
+        color: #fff;
+        font-size: 16px;    
+        text-align: left;   
+        width: 300px; 
+    } 
+
+        .footer__anchor {
+            color: #fff;
+            text-decoration: none;
+        }
+
+/* phone */
+@media only screen and (max-width: 480px){
+    #gridArea {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:     
+            "header__container"
+            "slider" 
+            "servicios"               
+            "footer__container";    
+        grid-template-rows: 10% 20% 53% 20%;    
+    }
+    header nav{
+        flex-direction: column;        
+    }
+    header ul{
+        flex-direction: column;        
+        align-items: center;
+    }
+    header li{
+        padding-left: 0px;
+    }    
+
+    .slider__home {       
+        padding: 5% 3% 10% 3%;
+    }
+
+    .slider__slogan {        
+        font-size: 30px;    
+    }    
+    
+    .slider__desc {               
+        padding: 2% 5% 5% 5%;        
+    }       
+    
+    .slider__btn {
+    font-size: 16px;    
+    }
+
+    .servicios h3{        
+        padding: 10px 0 20px 0;
+    }
+
+    .news__desc {    
+        padding-bottom: 5%;      
+    }  
+
+    .footer__container {       
+        padding: 70px 20%;      
+    }
+            
+} 
+
+/* Tablet */
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+    
+    #gridArea {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:     
+            "header__container"
+            "slider" 
+            "servicios"               
+            "footer__container";    
+        grid-template-rows: 10% 20% 53% 20%;    
+    }
+    
+    .footer__container {       
+        padding: 70px 30%;      
+    }
+
+    .slider__desc {               
+        padding: 2% 5% 3% 5%;        
+    }   
+
+    .news__desc {    
+        padding-bottom: 5%;      
+    }               
+            
+    }  
+
+/* Desktop */
+@media only screen and (min-width: 1024px){
+    
+} 
+
+.text-focus-in {
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.fade-in-bottom {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-in-right {
+	-webkit-animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+ @keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }   
